@@ -39,6 +39,7 @@ export class AppComponent implements OnInit {
     public authservice: AuthService
   ) {}
   ngOnInit(): void {
+    this.router.navigate(['/signin']);
     this.validationFormUser = this.formBuilder.group({
       email: new FormControl(
         '',
