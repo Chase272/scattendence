@@ -14,7 +14,19 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
+    <ion-title>Cords</ion-title>
+    <!-- <div *ngIf="getPostion?.coords?.longitude || getPostion?.coords?.latitude">
+      <ion-text slot="start">Longitude</ion-text><br>
+      <strong>{{ getPostion?.coords?.longitude }}</strong><br>
+      <ion-text slot="start">Latitude</ion-text><br>
+      <strong>{{  getPostion?.coords?.latitude }}</strong>
+    </div> -->
+    <!-- <div *ngIf="!getPostion">
+      <ion-text color="danger">please press button</ion-text>
+    </div> -->
     <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-item slot="end">
+      <ion-button color="primary" (click)="getLocation()">Get Location</ion-button>
+    </ion-item>
   </div>
 </ion-content>
