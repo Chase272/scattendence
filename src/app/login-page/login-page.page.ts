@@ -11,11 +11,11 @@ import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: 'app.component.html',
-  styleUrls: ['app.component.scss'],
+  selector: 'app-login-page',
+  templateUrl: 'login-page.page.html',
+  styleUrls: ['login-page.page.scss'],
 })
-export class AppComponent implements OnInit {
+export class LoginPage implements OnInit {
   text = 'Hello World';
 
   validationUserMessage = {
