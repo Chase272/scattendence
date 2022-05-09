@@ -1,8 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title> Scattendence </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -14,7 +12,20 @@
   </ion-header>
 
   <div id="container">
-    <ion-title>Cords</ion-title>
+    <p class="ion-text-left">
+      Date: {{today | date}}
+      <br />
+      Sub_code: DBMS
+      <br />
+      Teacher:Mrs Nagma Kazzi
+    </p>
+    <ion-title class="ion-hide">Scan Me!</ion-title>
+
+    <qrcode
+      [qrdata]="myAngularxQrCode"
+      [width]="256"
+      [errorCorrectionLevel]="'M'"
+    ></qrcode>
     <!-- <div *ngIf="getPostion?.coords?.longitude || getPostion?.coords?.latitude">
       <ion-text slot="start">Longitude</ion-text><br>
       <strong>{{ getPostion?.coords?.longitude }}</strong><br>
@@ -24,9 +35,19 @@
     <!-- <div *ngIf="!getPostion">
       <ion-text color="danger">please press button</ion-text>
     </div> -->
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-    <ion-item slot="end">
-      <ion-button color="primary" (click)="getLocation()">Get Location</ion-button>
-    </ion-item>
+    <!-- <p>
+      Start with Ionic
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://ionicframework.com/docs/components"
+        >UI Components</a
+      >
+    </p> -->
+    <div class="ion-text-center">
+      <ion-button color="primary" (click)="getLocation()"
+        >Genrate Attendence QR</ion-button
+      >
+    </div>
   </div>
 </ion-content>

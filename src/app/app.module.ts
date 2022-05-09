@@ -12,6 +12,8 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { firebaseConfig } from 'src/environments/environment';
+
+import { QRCodeModule } from 'angularx-qrcode';
 import { Geolocation } from '@awesome-cordova-plugins/geolocation/ngx';
 
 @NgModule({
@@ -25,9 +27,13 @@ import { Geolocation } from '@awesome-cordova-plugins/geolocation/ngx';
     FormsModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    QRCodeModule
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, Geolocation],
+  providers: [
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    Geolocation,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

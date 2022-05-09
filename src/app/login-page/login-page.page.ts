@@ -61,7 +61,6 @@ export class LoginPage implements OnInit {
         console.log(resp);
 
         if (resp.operationType === 'signIn') {
-          console.log('hi');
           this.router.navigate(['/tabs','home']);
         }
       });
